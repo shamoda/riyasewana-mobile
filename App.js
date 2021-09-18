@@ -4,13 +4,15 @@ import { StyleSheet, Text, View } from 'react-native';
 import AppButton from './app/components/AppButton';
 import AppText from './app/components/AppText';
 import Card from './app/components/Card';
+import SideDrawer from './app/components/SideDrawer';
 import colors from './app/config/colors';
 import SparePartDetailsScreen from './app/screens/SparePartDetailsScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <SparePartDetailsScreen />
+      {/* <SparePartDetailsScreen /> */}
+      <SideDrawer />
       <StatusBar style="auto" />
     </View>
   );

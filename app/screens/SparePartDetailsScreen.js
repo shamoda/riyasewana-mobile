@@ -1,47 +1,49 @@
 import React from 'react';
-import { Image, View, StyleSheet, Button, Alert } from 'react-native';
+import { Image, View, StyleSheet, Button, Alert, ScrollView } from 'react-native';
 import AppButton from '../components/AppButton';
 import AppText from '../components/AppText';
 import colors from '../config/colors';
 
 function SparePartDetailsScreen(props) {
     return (
-        <View>
-            <Image resizeMode="cover" fadeDuration={300} style={styles.image} source={require("../assets/test.jpg")} />
-            
-            <View style={styles.detailsContainer}>
+        <ScrollView>
+            <View>
+                <Image resizeMode="cover" fadeDuration={300} style={styles.image} source={require("../assets/test.jpg")} />
+                
+                <View style={styles.detailsContainer}>
 
-                <AppText style={styles.title}>BMW z4 2020 M40</AppText>
-                <AppText style={styles.date}>2021-01-01</AppText>
-                <AppText style={styles.price}>Rs.1600000</AppText>
-                
-                <View style={styles.wrap}>
-                    <View style={styles.info} ><AppText style={styles.infoText} >Condition:</AppText></View>
-                    <View style={styles.info} ><AppText style={styles.infoText} >Brand New</AppText></View>
-                </View>
-                <View style={styles.wrap}>
-                    <View style={styles.info} ><AppText style={styles.infoText} >Type:</AppText></View>
-                    <View style={styles.info} ><AppText style={styles.infoText} >Sports Car</AppText></View>
-                </View>
-                <View style={styles.wrap}>
-                    <View style={styles.info} ><AppText style={styles.infoText} >Category:</AppText></View>
-                    <View style={styles.info} ><AppText style={styles.infoText} >Audio System</AppText></View>
-                </View>
-                <View  ><AppText style={styles.additionalText} >This will be a long text to test what will happen if user enters a long text input This will be a long text to test what will happen if user enters a long text input</AppText></View>
-                
-                <View>
-                    <AppText  style={styles.contactTitle} >Contact info:</AppText>
-                    <AppText  style={styles.contactInfo} >Name: Shamoda Jayasekara</AppText>
-                    <AppText  style={styles.contactInfo} >Contact No: 0713432334</AppText>
-                    <AppText  style={styles.contactInfo} >Location: Colombo</AppText>
-                </View>
+                    <AppText style={styles.title}>BMW z4 2020 M40</AppText>
+                    <AppText style={styles.date}>2021-01-01</AppText>
+                    <AppText style={styles.price}>Rs.1600000</AppText>
+                    
+                    <View style={styles.wrap}>
+                        <View style={styles.info} ><AppText style={styles.infoText} >Condition: Brand New</AppText></View>
+                        {/* <View style={styles.info} ><AppText style={styles.infoText} >Brand New</AppText></View> */}
+                    </View>
+                    <View style={styles.wrap}>
+                        <View style={styles.info} ><AppText style={styles.infoText} >Type: Sports Car</AppText></View>
+                        {/* <View style={styles.info} ><AppText style={styles.infoText} >Sports Car</AppText></View> */}
+                    </View>
+                    <View style={styles.wrap}>
+                        <View style={styles.info} ><AppText style={styles.infoText} >Category: Audio System</AppText></View>
+                        {/* <View style={styles.info} ><AppText style={styles.infoText} >Audio System</AppText></View> */}
+                    </View>
+                    <View  ><AppText style={styles.additionalText} >This will be a long text to test what will happen if user enters a long text input This will be a long text to test what will happen if user enters a long text input</AppText></View>
+                    
+                    <View>
+                        <AppText  style={styles.contactTitle} >Contact info:</AppText>
+                        <AppText  style={styles.contactInfo} >Name: Shamoda Jayasekara</AppText>
+                        <AppText  style={styles.contactInfo} >Contact No: 0713432334</AppText>
+                        <AppText  style={styles.contactInfo} >Location: Colombo</AppText>
+                    </View>
 
-                <View style={styles.button}>
-                    <Button title="Call Seller" onPress={() => alert("clicked")} color={colors.primary} />
+                    <View style={styles.button}>
+                        <Button title="Call Seller" onPress={() => alert("clicked")} color={colors.primary} />
+                    </View>
+                    
                 </View>
-                
             </View>
-        </View>
+        </ScrollView>
     );
 }
 
@@ -100,7 +102,7 @@ const styles = StyleSheet.create({
         flex: 1, 
         alignSelf: 'stretch', 
         flexDirection: 'row', 
-        marginBottom: 25
+        marginBottom: 5
     },
 })
 
